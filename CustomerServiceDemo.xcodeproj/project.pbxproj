@@ -15,6 +15,29 @@
 		F3D2C7C41D40DEAA00CABB80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C7C21D40DEAA00CABB80 /* LaunchScreen.storyboard */; };
 		F3D2C7CF1D40DEAA00CABB80 /* CustomerServiceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7CE1D40DEAA00CABB80 /* CustomerServiceDemoTests.m */; };
 		F3D2C7DA1D40DEAA00CABB80 /* CustomerServiceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7D91D40DEAA00CABB80 /* CustomerServiceDemoUITests.m */; };
+		F3D2C7FA1D40E08100CABB80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C7E71D40E08100CABB80 /* Assets.xcassets */; };
+		F3D2C7FB1D40E08100CABB80 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C7E81D40E08100CABB80 /* Base.lproj */; };
+		F3D2C7FC1D40E08100CABB80 /* ChatRecorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7EA1D40E08100CABB80 /* ChatRecorderView.m */; };
+		F3D2C7FD1D40E08100CABB80 /* CreatePCMheaderToWav.c in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7EB1D40E08100CABB80 /* CreatePCMheaderToWav.c */; };
+		F3D2C7FE1D40E08100CABB80 /* KefuMsgClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7F01D40E08100CABB80 /* KefuMsgClient.m */; };
+		F3D2C7FF1D40E08100CABB80 /* KMFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7F21D40E08100CABB80 /* KMFileManager.m */; };
+		F3D2C8001D40E08100CABB80 /* KMMp3Player.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7F41D40E08100CABB80 /* KMMp3Player.m */; };
+		F3D2C8011D40E08100CABB80 /* KMRecorderTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7F61D40E08100CABB80 /* KMRecorderTimer.m */; };
+		F3D2C8021D40E08100CABB80 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D2C7F81D40E08100CABB80 /* libmp3lame.a */; };
+		F3D2C8281D40EB5800CABB80 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C8231D40EB5800CABB80 /* AppConfig.m */; };
+		F3D2C8291D40EB5800CABB80 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C8261D40EB5800CABB80 /* Log.m */; };
+		F3D2C8381D40EEC800CABB80 /* leftNow1.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C82C1D40EEC800CABB80 /* leftNow1.png */; };
+		F3D2C8391D40EEC800CABB80 /* leftNow2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C82D1D40EEC800CABB80 /* leftNow2.png */; };
+		F3D2C83A1D40EEC800CABB80 /* leftNow3.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C82E1D40EEC800CABB80 /* leftNow3.png */; };
+		F3D2C83B1D40EEC800CABB80 /* leftNow4.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C82F1D40EEC800CABB80 /* leftNow4.png */; };
+		F3D2C83C1D40EEC800CABB80 /* leftNow5.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C8301D40EEC800CABB80 /* leftNow5.png */; };
+		F3D2C83D1D40EEC800CABB80 /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C8311D40EEC800CABB80 /* mic.png */; };
+		F3D2C83E1D40EEC800CABB80 /* rightNow1.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C8321D40EEC800CABB80 /* rightNow1.png */; };
+		F3D2C83F1D40EEC800CABB80 /* rightNow2.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C8331D40EEC800CABB80 /* rightNow2.png */; };
+		F3D2C8401D40EEC800CABB80 /* rightNow3.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C8341D40EEC800CABB80 /* rightNow3.png */; };
+		F3D2C8411D40EEC800CABB80 /* rightNow4.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C8351D40EEC800CABB80 /* rightNow4.png */; };
+		F3D2C8421D40EEC800CABB80 /* rightNow5.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C8361D40EEC800CABB80 /* rightNow5.png */; };
+		F3D2C8431D40EEC800CABB80 /* voiceBg.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C8371D40EEC800CABB80 /* voiceBg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +74,41 @@
 		F3D2C7D51D40DEAA00CABB80 /* CustomerServiceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerServiceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D2C7D91D40DEAA00CABB80 /* CustomerServiceDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerServiceDemoUITests.m; sourceTree = "<group>"; };
 		F3D2C7DB1D40DEAA00CABB80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D2C7E71D40E08100CABB80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3D2C7E81D40E08100CABB80 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		F3D2C7E91D40E08100CABB80 /* ChatRecorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRecorderView.h; sourceTree = "<group>"; };
+		F3D2C7EA1D40E08100CABB80 /* ChatRecorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecorderView.m; sourceTree = "<group>"; };
+		F3D2C7EB1D40E08100CABB80 /* CreatePCMheaderToWav.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CreatePCMheaderToWav.c; sourceTree = "<group>"; };
+		F3D2C7EC1D40E08100CABB80 /* CreatePCMheaderToWav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePCMheaderToWav.h; sourceTree = "<group>"; };
+		F3D2C7EE1D40E08100CABB80 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		F3D2C7EF1D40E08100CABB80 /* KefuMsgClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KefuMsgClient.h; sourceTree = "<group>"; };
+		F3D2C7F01D40E08100CABB80 /* KefuMsgClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KefuMsgClient.m; sourceTree = "<group>"; };
+		F3D2C7F11D40E08100CABB80 /* KMFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMFileManager.h; sourceTree = "<group>"; };
+		F3D2C7F21D40E08100CABB80 /* KMFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMFileManager.m; sourceTree = "<group>"; };
+		F3D2C7F31D40E08100CABB80 /* KMMp3Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMMp3Player.h; sourceTree = "<group>"; };
+		F3D2C7F41D40E08100CABB80 /* KMMp3Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMMp3Player.m; sourceTree = "<group>"; };
+		F3D2C7F51D40E08100CABB80 /* KMRecorderTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMRecorderTimer.h; sourceTree = "<group>"; };
+		F3D2C7F61D40E08100CABB80 /* KMRecorderTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMRecorderTimer.m; sourceTree = "<group>"; };
+		F3D2C7F71D40E08100CABB80 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		F3D2C7F81D40E08100CABB80 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		F3D2C8221D40EB5800CABB80 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		F3D2C8231D40EB5800CABB80 /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		F3D2C8241D40EB5800CABB80 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F3D2C8251D40EB5800CABB80 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		F3D2C8261D40EB5800CABB80 /* Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Log.m; sourceTree = "<group>"; };
+		F3D2C8271D40EB5800CABB80 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		F3D2C82C1D40EEC800CABB80 /* leftNow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftNow1.png; sourceTree = "<group>"; };
+		F3D2C82D1D40EEC800CABB80 /* leftNow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftNow2.png; sourceTree = "<group>"; };
+		F3D2C82E1D40EEC800CABB80 /* leftNow3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftNow3.png; sourceTree = "<group>"; };
+		F3D2C82F1D40EEC800CABB80 /* leftNow4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftNow4.png; sourceTree = "<group>"; };
+		F3D2C8301D40EEC800CABB80 /* leftNow5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftNow5.png; sourceTree = "<group>"; };
+		F3D2C8311D40EEC800CABB80 /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic.png; sourceTree = "<group>"; };
+		F3D2C8321D40EEC800CABB80 /* rightNow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightNow1.png; sourceTree = "<group>"; };
+		F3D2C8331D40EEC800CABB80 /* rightNow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightNow2.png; sourceTree = "<group>"; };
+		F3D2C8341D40EEC800CABB80 /* rightNow3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightNow3.png; sourceTree = "<group>"; };
+		F3D2C8351D40EEC800CABB80 /* rightNow4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightNow4.png; sourceTree = "<group>"; };
+		F3D2C8361D40EEC800CABB80 /* rightNow5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightNow5.png; sourceTree = "<group>"; };
+		F3D2C8371D40EEC800CABB80 /* voiceBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voiceBg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D2C8021D40E08100CABB80 /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +160,25 @@
 		F3D2C7B31D40DEAA00CABB80 /* CustomerServiceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F3D2C82A1D40EEC800CABB80 /* Resource */,
+				F3D2C8211D40EB5800CABB80 /* Support */,
+				F3D2C7E71D40E08100CABB80 /* Assets.xcassets */,
+				F3D2C7E81D40E08100CABB80 /* Base.lproj */,
+				F3D2C7E91D40E08100CABB80 /* ChatRecorderView.h */,
+				F3D2C7EA1D40E08100CABB80 /* ChatRecorderView.m */,
+				F3D2C7EB1D40E08100CABB80 /* CreatePCMheaderToWav.c */,
+				F3D2C7EC1D40E08100CABB80 /* CreatePCMheaderToWav.h */,
+				F3D2C7EE1D40E08100CABB80 /* Header.h */,
+				F3D2C7EF1D40E08100CABB80 /* KefuMsgClient.h */,
+				F3D2C7F01D40E08100CABB80 /* KefuMsgClient.m */,
+				F3D2C7F11D40E08100CABB80 /* KMFileManager.h */,
+				F3D2C7F21D40E08100CABB80 /* KMFileManager.m */,
+				F3D2C7F31D40E08100CABB80 /* KMMp3Player.h */,
+				F3D2C7F41D40E08100CABB80 /* KMMp3Player.m */,
+				F3D2C7F51D40E08100CABB80 /* KMRecorderTimer.h */,
+				F3D2C7F61D40E08100CABB80 /* KMRecorderTimer.m */,
+				F3D2C7F71D40E08100CABB80 /* lame.h */,
+				F3D2C7F81D40E08100CABB80 /* libmp3lame.a */,
 				F3D2C7B71D40DEAA00CABB80 /* AppDelegate.h */,
 				F3D2C7B81D40DEAA00CABB80 /* AppDelegate.m */,
 				F3D2C7BA1D40DEAA00CABB80 /* ViewController.h */,
@@ -138,6 +216,46 @@
 				F3D2C7DB1D40DEAA00CABB80 /* Info.plist */,
 			);
 			path = CustomerServiceDemoUITests;
+			sourceTree = "<group>";
+		};
+		F3D2C8211D40EB5800CABB80 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F3D2C8221D40EB5800CABB80 /* AppConfig.h */,
+				F3D2C8231D40EB5800CABB80 /* AppConfig.m */,
+				F3D2C8241D40EB5800CABB80 /* Constants.h */,
+				F3D2C8251D40EB5800CABB80 /* Log.h */,
+				F3D2C8261D40EB5800CABB80 /* Log.m */,
+				F3D2C8271D40EB5800CABB80 /* Macros.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F3D2C82A1D40EEC800CABB80 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F3D2C82B1D40EEC800CABB80 /* Image */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F3D2C82B1D40EEC800CABB80 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F3D2C82C1D40EEC800CABB80 /* leftNow1.png */,
+				F3D2C82D1D40EEC800CABB80 /* leftNow2.png */,
+				F3D2C82E1D40EEC800CABB80 /* leftNow3.png */,
+				F3D2C82F1D40EEC800CABB80 /* leftNow4.png */,
+				F3D2C8301D40EEC800CABB80 /* leftNow5.png */,
+				F3D2C8311D40EEC800CABB80 /* mic.png */,
+				F3D2C8321D40EEC800CABB80 /* rightNow1.png */,
+				F3D2C8331D40EEC800CABB80 /* rightNow2.png */,
+				F3D2C8341D40EEC800CABB80 /* rightNow3.png */,
+				F3D2C8351D40EEC800CABB80 /* rightNow4.png */,
+				F3D2C8361D40EEC800CABB80 /* rightNow5.png */,
+				F3D2C8371D40EEC800CABB80 /* voiceBg.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +361,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D2C8431D40EEC800CABB80 /* voiceBg.png in Resources */,
+				F3D2C8391D40EEC800CABB80 /* leftNow2.png in Resources */,
+				F3D2C83A1D40EEC800CABB80 /* leftNow3.png in Resources */,
 				F3D2C7C41D40DEAA00CABB80 /* LaunchScreen.storyboard in Resources */,
+				F3D2C8381D40EEC800CABB80 /* leftNow1.png in Resources */,
+				F3D2C83B1D40EEC800CABB80 /* leftNow4.png in Resources */,
+				F3D2C83F1D40EEC800CABB80 /* rightNow2.png in Resources */,
 				F3D2C7C11D40DEAA00CABB80 /* Assets.xcassets in Resources */,
+				F3D2C8421D40EEC800CABB80 /* rightNow5.png in Resources */,
+				F3D2C7FB1D40E08100CABB80 /* Base.lproj in Resources */,
+				F3D2C7FA1D40E08100CABB80 /* Assets.xcassets in Resources */,
 				F3D2C7BF1D40DEAA00CABB80 /* Main.storyboard in Resources */,
+				F3D2C83C1D40EEC800CABB80 /* leftNow5.png in Resources */,
+				F3D2C8401D40EEC800CABB80 /* rightNow3.png in Resources */,
+				F3D2C83D1D40EEC800CABB80 /* mic.png in Resources */,
+				F3D2C83E1D40EEC800CABB80 /* rightNow1.png in Resources */,
+				F3D2C8411D40EEC800CABB80 /* rightNow4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +402,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D2C8291D40EB5800CABB80 /* Log.m in Sources */,
+				F3D2C7FF1D40E08100CABB80 /* KMFileManager.m in Sources */,
+				F3D2C7FD1D40E08100CABB80 /* CreatePCMheaderToWav.c in Sources */,
 				F3D2C7BC1D40DEAA00CABB80 /* ViewController.m in Sources */,
+				F3D2C8281D40EB5800CABB80 /* AppConfig.m in Sources */,
 				F3D2C7B91D40DEAA00CABB80 /* AppDelegate.m in Sources */,
+				F3D2C8011D40E08100CABB80 /* KMRecorderTimer.m in Sources */,
+				F3D2C7FC1D40E08100CABB80 /* ChatRecorderView.m in Sources */,
+				F3D2C8001D40E08100CABB80 /* KMMp3Player.m in Sources */,
 				F3D2C7B61D40DEAA00CABB80 /* main.m in Sources */,
+				F3D2C7FE1D40E08100CABB80 /* KefuMsgClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +558,10 @@
 				INFOPLIST_FILE = CustomerServiceDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CustomerServiceDemo",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = NingXia.CustomerServiceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -430,6 +574,10 @@
 				INFOPLIST_FILE = CustomerServiceDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CustomerServiceDemo",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = NingXia.CustomerServiceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
