@@ -10,11 +10,15 @@
 #import "KefuMsgClient.h"
 #import "KMFileManager.h"
 #import "KMMp3Player.h"
+#import "KMRecorderTimer.h"
 
-@interface ViewController () //<DDASRKefuDegegate>
+@interface ViewController () <KMRecorderTimerDelegate, DDASRKefuDegegate>
 
 @property (nonatomic, strong) KefuMsgClient *kefuClient;
 @property (nonatomic, strong) KMMp3Player *mp3Player;
+@property (nonatomic, strong) KMRecorderTimer *recountTimer;
+@property (nonatomic) NSInteger timeValue;
+@property (nonatomic) NSInteger touchTime;
 @property (nonatomic, copy) NSDictionary *userInfoDic;
 
 @end
@@ -29,6 +33,8 @@
     //    _kefuClient.delegate = self;
     _mp3Player = [[KMMp3Player alloc] init];
     _userInfoDic = @{@"chatInfo":@{@"businessType":@1, @"cell":@18800000004, @"cityId":@1, @"message":@"", @"mid":@"462d7806-3295-4355-a719-1c4a71e0bf7b", @"msgType":@0, @"orderId":@0, @"roleType":@3, @"skillType":@"common", @"source":@-1, @"uid":@564069099110401}, @"pid":@10001};
+    _recountTimer = [[KMRecorderTimer alloc] init];
+    _recountTimer.delegate = self;
     
     UIButton *startRecButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [startRecButton setFrame:(CGRect){20, 240 + 150, 80, 30}];
@@ -56,10 +62,16 @@
 }
 
 - (IBAction)startRecButtonDidClick:(id)sender {
+    _timeValue = 0;
+    _touchTime = 0;
+    
     [_kefuClient startRecWithPid:_userInfoDic];
+    [_recountTimer startTimer];
 }
 
 - (IBAction)stopRecButtonDidClick:(id)sender {
+    [NSThread sleepForTimeInterval:0.1];
+    [_recountTimer stopTimer];
     [_kefuClient finishSpeak];
 }
 
@@ -72,6 +84,24 @@
 
 - (IBAction)stopPlayButtonDidClick:(id)sender {
     [_mp3Player stopPlaying];
+}
+
+#pragma -mark KMRecorderTimerDelegate
+- (void)TimerActionValueChange:(int)time {
+    _timeValue = time / 10;
+    _touchTime = time;
+    if (_timeValue <= 1) {
+        _timeValue = 1;
+    }
+    NSLog(@"------------%zd-------", _timeValue);
+    if (_timeValue > 9) {
+        [_kefuClient finishSpeak];
+        [_mp3Player stopPlaying];
+        [_recountTimer stopTimer];
+        
+        //        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"说话时间过长～" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        //        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
