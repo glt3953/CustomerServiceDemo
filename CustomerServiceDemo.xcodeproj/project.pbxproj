@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30F0D3F1D41E3F8005DC4E9 /* libDDVoiceRecognitionClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D3E1D41E3F8005DC4E9 /* libDDVoiceRecognitionClient.a */; };
+		F30F0D561D41F3F6005DC4E9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D551D41F3F6005DC4E9 /* SystemConfiguration.framework */; };
+		F30F0D581D41F43B005DC4E9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D571D41F43B005DC4E9 /* libz.tbd */; };
 		F3D2C7B61D40DEAA00CABB80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7B51D40DEAA00CABB80 /* main.m */; };
 		F3D2C7B91D40DEAA00CABB80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7B81D40DEAA00CABB80 /* AppDelegate.m */; };
-		F3D2C7BC1D40DEAA00CABB80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7BB1D40DEAA00CABB80 /* ViewController.m */; };
+		F3D2C7BC1D40DEAA00CABB80 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7BB1D40DEAA00CABB80 /* ViewController.mm */; };
 		F3D2C7BF1D40DEAA00CABB80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C7BD1D40DEAA00CABB80 /* Main.storyboard */; };
 		F3D2C7C11D40DEAA00CABB80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C7C01D40DEAA00CABB80 /* Assets.xcassets */; };
 		F3D2C7C41D40DEAA00CABB80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D2C7C21D40DEAA00CABB80 /* LaunchScreen.storyboard */; };
@@ -58,12 +61,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F30F0D3E1D41E3F8005DC4E9 /* libDDVoiceRecognitionClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDDVoiceRecognitionClient.a; sourceTree = "<group>"; };
+		F30F0D4B1D41EFBF005DC4E9 /* DIDIRecognizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIRecognizerViewController.h; sourceTree = "<group>"; };
+		F30F0D4C1D41EFBF005DC4E9 /* DIDIRecognizerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIRecognizerViewDelegate.h; sourceTree = "<group>"; };
+		F30F0D4D1D41EFBF005DC4E9 /* DIDIRecognizerViewParamsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIRecognizerViewParamsObject.h; sourceTree = "<group>"; };
+		F30F0D4E1D41EFBF005DC4E9 /* DIDIVoiceRecognitionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIVoiceRecognitionClient.h; sourceTree = "<group>"; };
+		F30F0D4F1D41EFBF005DC4E9 /* DIDIVRDataUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIVRDataUploader.h; sourceTree = "<group>"; };
+		F30F0D501D41EFBF005DC4E9 /* DIDIVRFileRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIVRFileRecognizer.h; sourceTree = "<group>"; };
+		F30F0D511D41EFBF005DC4E9 /* DIDIVRLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIVRLogger.h; sourceTree = "<group>"; };
+		F30F0D521D41EFBF005DC4E9 /* DIDIVRRawDataRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIVRRawDataRecognizer.h; sourceTree = "<group>"; };
+		F30F0D531D41F2B8005DC4E9 /* DIDIVRGzipCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIVRGzipCompressor.h; sourceTree = "<group>"; };
+		F30F0D551D41F3F6005DC4E9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F30F0D571D41F43B005DC4E9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F3D2C7B11D40DEAA00CABB80 /* CustomerServiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerServiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D2C7B51D40DEAA00CABB80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3D2C7B71D40DEAA00CABB80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3D2C7B81D40DEAA00CABB80 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F3D2C7BA1D40DEAA00CABB80 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F3D2C7BB1D40DEAA00CABB80 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F3D2C7BB1D40DEAA00CABB80 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		F3D2C7BE1D40DEAA00CABB80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3D2C7C01D40DEAA00CABB80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3D2C7C31D40DEAA00CABB80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,7 +131,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30F0D581D41F43B005DC4E9 /* libz.tbd in Frameworks */,
+				F30F0D561D41F3F6005DC4E9 /* SystemConfiguration.framework in Frameworks */,
 				F3D2C8021D40E08100CABB80 /* libmp3lame.a in Frameworks */,
+				F30F0D3F1D41E3F8005DC4E9 /* libDDVoiceRecognitionClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +158,8 @@
 		F3D2C7A81D40DEAA00CABB80 = {
 			isa = PBXGroup;
 			children = (
+				F30F0D571D41F43B005DC4E9 /* libz.tbd */,
+				F30F0D551D41F3F6005DC4E9 /* SystemConfiguration.framework */,
 				F3D2C7B31D40DEAA00CABB80 /* CustomerServiceDemo */,
 				F3D2C7CD1D40DEAA00CABB80 /* CustomerServiceDemoTests */,
 				F3D2C7D81D40DEAA00CABB80 /* CustomerServiceDemoUITests */,
@@ -160,6 +180,16 @@
 		F3D2C7B31D40DEAA00CABB80 /* CustomerServiceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F30F0D531D41F2B8005DC4E9 /* DIDIVRGzipCompressor.h */,
+				F30F0D4B1D41EFBF005DC4E9 /* DIDIRecognizerViewController.h */,
+				F30F0D4C1D41EFBF005DC4E9 /* DIDIRecognizerViewDelegate.h */,
+				F30F0D4D1D41EFBF005DC4E9 /* DIDIRecognizerViewParamsObject.h */,
+				F30F0D4E1D41EFBF005DC4E9 /* DIDIVoiceRecognitionClient.h */,
+				F30F0D4F1D41EFBF005DC4E9 /* DIDIVRDataUploader.h */,
+				F30F0D501D41EFBF005DC4E9 /* DIDIVRFileRecognizer.h */,
+				F30F0D511D41EFBF005DC4E9 /* DIDIVRLogger.h */,
+				F30F0D521D41EFBF005DC4E9 /* DIDIVRRawDataRecognizer.h */,
+				F30F0D3E1D41E3F8005DC4E9 /* libDDVoiceRecognitionClient.a */,
 				F3D2C82A1D40EEC800CABB80 /* Resource */,
 				F3D2C8211D40EB5800CABB80 /* Support */,
 				F3D2C7E71D40E08100CABB80 /* Assets.xcassets */,
@@ -182,7 +212,7 @@
 				F3D2C7B71D40DEAA00CABB80 /* AppDelegate.h */,
 				F3D2C7B81D40DEAA00CABB80 /* AppDelegate.m */,
 				F3D2C7BA1D40DEAA00CABB80 /* ViewController.h */,
-				F3D2C7BB1D40DEAA00CABB80 /* ViewController.m */,
+				F3D2C7BB1D40DEAA00CABB80 /* ViewController.mm */,
 				F3D2C7BD1D40DEAA00CABB80 /* Main.storyboard */,
 				F3D2C7C01D40DEAA00CABB80 /* Assets.xcassets */,
 				F3D2C7C21D40DEAA00CABB80 /* LaunchScreen.storyboard */,
@@ -405,7 +435,7 @@
 				F3D2C8291D40EB5800CABB80 /* Log.m in Sources */,
 				F3D2C7FF1D40E08100CABB80 /* KMFileManager.m in Sources */,
 				F3D2C7FD1D40E08100CABB80 /* CreatePCMheaderToWav.c in Sources */,
-				F3D2C7BC1D40DEAA00CABB80 /* ViewController.m in Sources */,
+				F3D2C7BC1D40DEAA00CABB80 /* ViewController.mm in Sources */,
 				F3D2C8281D40EB5800CABB80 /* AppConfig.m in Sources */,
 				F3D2C7B91D40DEAA00CABB80 /* AppDelegate.m in Sources */,
 				F3D2C8011D40E08100CABB80 /* KMRecorderTimer.m in Sources */,
@@ -562,6 +592,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CustomerServiceDemo",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = NingXia.CustomerServiceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -578,6 +609,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CustomerServiceDemo",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = NingXia.CustomerServiceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
