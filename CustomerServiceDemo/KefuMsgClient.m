@@ -50,6 +50,9 @@
         RecordTimeCount = 0;
         errMsgStatus = 0;
         errMsgStr = [[NSString alloc] init];
+        
+        //开启提示音
+        [[DIDIVoiceRecognitionClient sharedInstance] setPlayTone:EVoiceRecognitionPlayTonesAll isPlay:YES];
     }
     
     return self;

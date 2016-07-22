@@ -2,9 +2,6 @@
 //  DIDIVRFileRecognizer.h
 //  DIDIVoiceRecognitionClient
 //
-//  Created by didi on 13-11-13.
-//  Copyright (c) 2013年 didi, Inc. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import "DIDIVoiceRecognitionClient.h"
@@ -27,7 +24,7 @@
  *
  * @return 状态码
  */
-- (id)initFileRecognizerWithFilePath:(NSString *)filePath sampleRate:(int)rate property:(TBDVoiceRecognitionProperty)property delegate:(id<MVoiceRecognitionClientDelegate>)delegate __attribute__((deprecated));
+- (id)initFileRecognizerWithFilePath:(NSString *)filePath sampleRate:(int)rate property:(TDDVoiceRecognitionProperty)property delegate:(id<MVoiceRecognitionClientDelegate>)delegate __attribute__((deprecated));
 
 
 /**

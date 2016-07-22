@@ -222,7 +222,7 @@ enum TVoiceRecognitionLanguage
 
 //－－－－－－－－－－－－－－－－－－－提示音－－－－－－－－－－－－－－－－－－－－－－－
 // 播放提示音，默认为播放,录音开始，录音结束提示音
-// DIDIVoiceRecognitionClientResources/Tone
+// DDASRClientResources/Tone
 // record_start.caf   录音开始声音文件
 // record_end.caf     录音结束声音文件
 // 声音资源需要加到项目工程里，用户可替换资源文件，文件名不可以变，建音提示音不宜过长，0。5秒左右。

@@ -3,32 +3,31 @@
 //  VoiceRecognitionClient
 //
 //  Created by  段弘 on 14-9-11.
-//  Copyright (c) 2014年 didi, Inc. All rights reserved.
+//  Copyright (c) 2014年 DD, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-#define BDVRLogDebug(fmt, ...) [DIDIVRLogger logDebug:[NSString stringWithFormat:@"%s:%d " fmt, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]]
-#define BDVRLogError(fmt, ...) [DIDIVRLogger logError:[NSString stringWithFormat:@"%s:%d " fmt, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]]
+#define DIDIVRLogDebug(fmt, ...) [DIDIVRLogger logDebug:[NSString stringWithFormat:@"%s:%d " fmt, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]]
+#define DIDIVRLogError(fmt, ...) [DIDIVRLogger logError:[NSString stringWithFormat:@"%s:%d " fmt, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]]
 
-typedef enum BDVRLogLevel {
+typedef enum DDVRLogLevel {
     BDVR_LOG_OFF = 0,
     BDVR_LOG_ERROR = 1,
     BDVR_LOG_WARN = 2,
     BDVR_LOG_INFO = 3,
     BDVR_LOG_DEBUG = 4,
     BDVR_LOG_VERBOSE = 5,
-} BDVRLogLevel;
+} DDVRLogLevel;
 
 @interface DIDIVRLogger : NSObject
-
 /**
  * @brief 设置logLevel
  *
  * @param logLevel
  *            日志级别
  */
-+ (void)setLogLevel:(BDVRLogLevel)logLevel;
++ (void)setLogLevel:(DDVRLogLevel)logLevel;
 
 /**
  * @brief 设置是否写日志文件

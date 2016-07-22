@@ -2,8 +2,8 @@
 //  DIDIRecognizerViewController.h
 //  DIDIVoiceRecognitionClient
 //
-//  Created by didi on 13-9-25.
-//  Copyright (c) 2013 didi Inc. All rights reserved.
+//  Created by DD on 13-9-25.
+//  Copyright (c) 2013 DD Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -18,10 +18,10 @@
  */
 @interface DIDIRecognizerViewController : UIViewController<MVoiceRecognitionClientDelegate, DIDIRecognizerDialogDelegate, AVAudioPlayerDelegate>
 {
-    id<DIDIRecognizerViewDelegate> delegate;
+//    id<DIDIRecognizerViewDelegate> delegate;
 }
 
-@property (assign) id<DIDIRecognizerViewDelegate> delegate; // 识别结果delegate
+@property (nonatomic, weak) id<DIDIRecognizerViewDelegate> delegate; // 识别结果delegate
 @property (nonatomic, readonly) DIDITheme *recognizerViewTheme; // 得到当前的主题
 @property (nonatomic, assign) BOOL enableFullScreenMode; // 全屏模式
 

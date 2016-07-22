@@ -3,7 +3,7 @@
 //  VoiceRecognitionClient
 //
 //  Created by  段弘 on 14-5-21.
-//  Copyright (c) 2014年 didi, Inc. All rights reserved.
+//  Copyright (c) 2014年 DD, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

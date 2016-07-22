@@ -10,6 +10,8 @@
 		F30F0D3F1D41E3F8005DC4E9 /* libDDVoiceRecognitionClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D3E1D41E3F8005DC4E9 /* libDDVoiceRecognitionClient.a */; };
 		F30F0D561D41F3F6005DC4E9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D551D41F3F6005DC4E9 /* SystemConfiguration.framework */; };
 		F30F0D581D41F43B005DC4E9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D571D41F43B005DC4E9 /* libz.tbd */; };
+		F30F0D6A1D4216DC005DC4E9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D691D4216DC005DC4E9 /* GLKit.framework */; };
+		F30F0D921D4223B3005DC4E9 /* DDASRClientResources in Resources */ = {isa = PBXBuildFile; fileRef = F30F0D911D4223B3005DC4E9 /* DDASRClientResources */; };
 		F3D2C7B61D40DEAA00CABB80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7B51D40DEAA00CABB80 /* main.m */; };
 		F3D2C7B91D40DEAA00CABB80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7B81D40DEAA00CABB80 /* AppDelegate.m */; };
 		F3D2C7BC1D40DEAA00CABB80 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7BB1D40DEAA00CABB80 /* ViewController.mm */; };
@@ -73,6 +75,8 @@
 		F30F0D531D41F2B8005DC4E9 /* DIDIVRGzipCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDIVRGzipCompressor.h; sourceTree = "<group>"; };
 		F30F0D551D41F3F6005DC4E9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F30F0D571D41F43B005DC4E9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F30F0D691D4216DC005DC4E9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		F30F0D911D4223B3005DC4E9 /* DDASRClientResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DDASRClientResources; sourceTree = "<group>"; };
 		F3D2C7B11D40DEAA00CABB80 /* CustomerServiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerServiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D2C7B51D40DEAA00CABB80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3D2C7B71D40DEAA00CABB80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30F0D6A1D4216DC005DC4E9 /* GLKit.framework in Frameworks */,
 				F30F0D581D41F43B005DC4E9 /* libz.tbd in Frameworks */,
 				F30F0D561D41F3F6005DC4E9 /* SystemConfiguration.framework in Frameworks */,
 				F3D2C8021D40E08100CABB80 /* libmp3lame.a in Frameworks */,
@@ -158,6 +163,7 @@
 		F3D2C7A81D40DEAA00CABB80 = {
 			isa = PBXGroup;
 			children = (
+				F30F0D691D4216DC005DC4E9 /* GLKit.framework */,
 				F30F0D571D41F43B005DC4E9 /* libz.tbd */,
 				F30F0D551D41F3F6005DC4E9 /* SystemConfiguration.framework */,
 				F3D2C7B31D40DEAA00CABB80 /* CustomerServiceDemo */,
@@ -180,6 +186,7 @@
 		F3D2C7B31D40DEAA00CABB80 /* CustomerServiceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F30F0D911D4223B3005DC4E9 /* DDASRClientResources */,
 				F30F0D531D41F2B8005DC4E9 /* DIDIVRGzipCompressor.h */,
 				F30F0D4B1D41EFBF005DC4E9 /* DIDIRecognizerViewController.h */,
 				F30F0D4C1D41EFBF005DC4E9 /* DIDIRecognizerViewDelegate.h */,
@@ -401,6 +408,7 @@
 				F3D2C7C11D40DEAA00CABB80 /* Assets.xcassets in Resources */,
 				F3D2C8421D40EEC800CABB80 /* rightNow5.png in Resources */,
 				F3D2C7FB1D40E08100CABB80 /* Base.lproj in Resources */,
+				F30F0D921D4223B3005DC4E9 /* DDASRClientResources in Resources */,
 				F3D2C7FA1D40E08100CABB80 /* Assets.xcassets in Resources */,
 				F3D2C7BF1D40DEAA00CABB80 /* Main.storyboard in Resources */,
 				F3D2C83C1D40EEC800CABB80 /* leftNow5.png in Resources */,

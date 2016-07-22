@@ -2,8 +2,8 @@
 //  DIDIRecognizerViewDelegate.h
 //  DIDIVoiceRecognitionClient
 //
-//  Created by didi on 13-9-23.
-//  Copyright (c) 2013年 didi. All rights reserved.
+//  Created by DD on 13-9-23.
+//  Copyright (c) 2013年 baidu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -2,9 +2,6 @@
 //  DIDIVRRawDataRecognizer.h
 //  DIDIVoiceRecognitionClient
 //
-//  Created by didi on 13-11-13.
-//  Copyright (c) 2013年 didi, Inc. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import "DIDIVoiceRecognitionClient.h"
@@ -15,7 +12,7 @@
 @property (nonatomic) NSInteger sampleRate;
 @property (nonatomic, copy) NSArray* prop_list;
 @property (nonatomic) NSInteger city_id;
-@property (nonatomic, assign) id<MVoiceRecognitionClientDelegate> delegate;
+@property (nonatomic, weak) id<MVoiceRecognitionClientDelegate> delegate;
 
 /**
  * @brief 初始化识别器
@@ -26,7 +23,7 @@
  *
  * @param property 识别模式
  */
-- (id)initRecognizerWithSampleRate:(int)rate property:(TBDVoiceRecognitionProperty)property delegate:(id<MVoiceRecognitionClientDelegate>)delegate __attribute__((deprecated));
+- (id)initRecognizerWithSampleRate:(int)rate property:(TDDVoiceRecognitionProperty)property delegate:(id<MVoiceRecognitionClientDelegate>)delegate __attribute__((deprecated));
 
 /**
  * @brief 初始化识别器
