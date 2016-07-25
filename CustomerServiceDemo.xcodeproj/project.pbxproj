@@ -11,7 +11,10 @@
 		F30F0D561D41F3F6005DC4E9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D551D41F3F6005DC4E9 /* SystemConfiguration.framework */; };
 		F30F0D581D41F43B005DC4E9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D571D41F43B005DC4E9 /* libz.tbd */; };
 		F30F0D6A1D4216DC005DC4E9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30F0D691D4216DC005DC4E9 /* GLKit.framework */; };
-		F30F0D921D4223B3005DC4E9 /* DDASRClientResources in Resources */ = {isa = PBXBuildFile; fileRef = F30F0D911D4223B3005DC4E9 /* DDASRClientResources */; };
+		F30F0D961D4230E0005DC4E9 /* DDASRClientResources in Resources */ = {isa = PBXBuildFile; fileRef = F30F0D951D4230E0005DC4E9 /* DDASRClientResources */; };
+		F3C1C5DC1D45FA9900CCE630 /* WaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C1C5DB1D45FA9900CCE630 /* WaverView.m */; };
+		F3C1C5E21D45FAC000CCE630 /* UIColor+NingXia.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C1C5DF1D45FAC000CCE630 /* UIColor+NingXia.m */; };
+		F3C1C5E31D45FAC000CCE630 /* UIImage+NingXia.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C1C5E11D45FAC000CCE630 /* UIImage+NingXia.m */; };
 		F3D2C7B61D40DEAA00CABB80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7B51D40DEAA00CABB80 /* main.m */; };
 		F3D2C7B91D40DEAA00CABB80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7B81D40DEAA00CABB80 /* AppDelegate.m */; };
 		F3D2C7BC1D40DEAA00CABB80 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3D2C7BB1D40DEAA00CABB80 /* ViewController.mm */; };
@@ -76,7 +79,13 @@
 		F30F0D551D41F3F6005DC4E9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F30F0D571D41F43B005DC4E9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F30F0D691D4216DC005DC4E9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		F30F0D911D4223B3005DC4E9 /* DDASRClientResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DDASRClientResources; sourceTree = "<group>"; };
+		F30F0D951D4230E0005DC4E9 /* DDASRClientResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DDASRClientResources; sourceTree = "<group>"; };
+		F3C1C5DA1D45FA9900CCE630 /* WaverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaverView.h; sourceTree = "<group>"; };
+		F3C1C5DB1D45FA9900CCE630 /* WaverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaverView.m; sourceTree = "<group>"; };
+		F3C1C5DE1D45FAC000CCE630 /* UIColor+NingXia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NingXia.h"; sourceTree = "<group>"; };
+		F3C1C5DF1D45FAC000CCE630 /* UIColor+NingXia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NingXia.m"; sourceTree = "<group>"; };
+		F3C1C5E01D45FAC000CCE630 /* UIImage+NingXia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NingXia.h"; sourceTree = "<group>"; };
+		F3C1C5E11D45FAC000CCE630 /* UIImage+NingXia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NingXia.m"; sourceTree = "<group>"; };
 		F3D2C7B11D40DEAA00CABB80 /* CustomerServiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerServiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D2C7B51D40DEAA00CABB80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3D2C7B71D40DEAA00CABB80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +169,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3C1C5D91D45FA9900CCE630 /* WaverView */ = {
+			isa = PBXGroup;
+			children = (
+				F3C1C5DA1D45FA9900CCE630 /* WaverView.h */,
+				F3C1C5DB1D45FA9900CCE630 /* WaverView.m */,
+			);
+			path = WaverView;
+			sourceTree = "<group>";
+		};
+		F3C1C5DD1D45FAC000CCE630 /* CategoryUI */ = {
+			isa = PBXGroup;
+			children = (
+				F3C1C5DE1D45FAC000CCE630 /* UIColor+NingXia.h */,
+				F3C1C5DF1D45FAC000CCE630 /* UIColor+NingXia.m */,
+				F3C1C5E01D45FAC000CCE630 /* UIImage+NingXia.h */,
+				F3C1C5E11D45FAC000CCE630 /* UIImage+NingXia.m */,
+			);
+			path = CategoryUI;
+			sourceTree = "<group>";
+		};
 		F3D2C7A81D40DEAA00CABB80 = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +215,9 @@
 		F3D2C7B31D40DEAA00CABB80 /* CustomerServiceDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F30F0D911D4223B3005DC4E9 /* DDASRClientResources */,
+				F3C1C5DD1D45FAC000CCE630 /* CategoryUI */,
+				F3C1C5D91D45FA9900CCE630 /* WaverView */,
+				F30F0D951D4230E0005DC4E9 /* DDASRClientResources */,
 				F30F0D531D41F2B8005DC4E9 /* DIDIVRGzipCompressor.h */,
 				F30F0D4B1D41EFBF005DC4E9 /* DIDIRecognizerViewController.h */,
 				F30F0D4C1D41EFBF005DC4E9 /* DIDIRecognizerViewDelegate.h */,
@@ -408,7 +439,7 @@
 				F3D2C7C11D40DEAA00CABB80 /* Assets.xcassets in Resources */,
 				F3D2C8421D40EEC800CABB80 /* rightNow5.png in Resources */,
 				F3D2C7FB1D40E08100CABB80 /* Base.lproj in Resources */,
-				F30F0D921D4223B3005DC4E9 /* DDASRClientResources in Resources */,
+				F30F0D961D4230E0005DC4E9 /* DDASRClientResources in Resources */,
 				F3D2C7FA1D40E08100CABB80 /* Assets.xcassets in Resources */,
 				F3D2C7BF1D40DEAA00CABB80 /* Main.storyboard in Resources */,
 				F3D2C83C1D40EEC800CABB80 /* leftNow5.png in Resources */,
@@ -448,8 +479,11 @@
 				F3D2C7B91D40DEAA00CABB80 /* AppDelegate.m in Sources */,
 				F3D2C8011D40E08100CABB80 /* KMRecorderTimer.m in Sources */,
 				F3D2C7FC1D40E08100CABB80 /* ChatRecorderView.m in Sources */,
+				F3C1C5E31D45FAC000CCE630 /* UIImage+NingXia.m in Sources */,
 				F3D2C8001D40E08100CABB80 /* KMMp3Player.m in Sources */,
 				F3D2C7B61D40DEAA00CABB80 /* main.m in Sources */,
+				F3C1C5DC1D45FA9900CCE630 /* WaverView.m in Sources */,
+				F3C1C5E21D45FAC000CCE630 /* UIColor+NingXia.m in Sources */,
 				F3D2C7FE1D40E08100CABB80 /* KefuMsgClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

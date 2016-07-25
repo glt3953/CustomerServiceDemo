@@ -15,6 +15,7 @@
 #import <Availability.h>
 #import "KMRecorderTimer.h"
 #import "ChatRecorderView.h"
+#import "WaverView.h"
 #import "KMFileManager.h"
 #import "Log.h"
 #import "Macros.h"
@@ -24,7 +25,9 @@
     NSMutableData *recData;
     KMRecorderTimer *_RecLevetimer;
 //    KMVoiceManageVC * recManager;
-    ChatRecorderView *ctView;
+    ChatRecorderView *ctView; //旧版录音UI
+    WaverView *_waverView; //新版录音UI
+    NSDictionary *_recInfoDic; //录音相关数据
     BOOL ISERROR;
     BOOL ISCONNECTEDTOSEVER;
     NSInteger RecordTimeCount;
@@ -43,6 +46,7 @@
         ISERROR = NO;
         ISCONNECTEDTOSEVER = NO;
         ctView  = [[ChatRecorderView alloc] init];
+        _waverView = [[WaverView alloc] init];
         recData = [[NSMutableData alloc] init];
         [super viewDidLoad];
         _RecLevetimer = [KMRecorderTimer DefaultManager];
@@ -67,7 +71,9 @@
     ISERROR = NO;
     LogDebug(@"1111%@", pid[@"pid"]);
     LogDebug(@"dadd%@", pid[@"chatInfo"]);
-    [self ShowChatview];
+    _recInfoDic = pid;
+    LogDebug(@"startRecWithPid _recInfoDic:%@", _recInfoDic);
+    [self showRecView];
     [self startVocRecWithdic:pid];
     
     [[UIApplication sharedApplication].keyWindow addSubview:self.view];
@@ -76,7 +82,7 @@
 //检测到用户超过1S无录音，则结束
 - (void)cancelVocRec {
 //    self.TimeValue = 0;
-    [self HidechatView];
+    [self hideRecView];
     
     [[DIDIVoiceRecognitionClient sharedInstance] stopVoiceRecognition];
 }
@@ -85,18 +91,49 @@
     
 }
 
+- (void)showRecView {
+    if (_recInfoDic && _recInfoDic[@"newVoice"] && [_recInfoDic[@"newVoice"] boolValue]) {
+        //新版
+        LogDebug(@"showWaverView");
+        [self showWaverView];
+    } else {
+        //旧版
+        LogDebug(@"ShowChatview");
+        [self ShowChatview];
+    }
+}
+
 - (void)ShowChatview {
     [ctView setFrame:ZKMRecorderViewRect];
     [ctView restoreDisplay];
     [self.view addSubview:ctView];
 }
 
+- (void)showWaverView {
+    CGFloat originX = -100; //将波纹的起始点挪至界面外
+    CGFloat viewHeight = 180;
+    //定制
+    [_waverView setFrame:(CGRect){originX, CGRectGetHeight(self.view.bounds) - viewHeight, CGRectGetWidth(self.view.bounds) + 2 * ABS(originX), viewHeight}];
+    _waverView.numberOfWaves = 4;
+    [self.view addSubview:_waverView];
+}
+
 //用户主动结束录音
 - (void)finishSpeak {
-    [self HidechatView];
+    [self hideRecView];
     [[DIDIVoiceRecognitionClient sharedInstance] speakFinish];
 
     [self.view removeFromSuperview];
+}
+
+- (void)hideRecView {
+    if (_recInfoDic && _recInfoDic[@"newVoice"] && [_recInfoDic[@"newVoice"] boolValue]) {
+        //新版
+        [self hideWaverView];
+    } else {
+        //旧版
+        [self HidechatView];
+    }
 }
 
 - (void)HidechatView {
@@ -104,6 +141,13 @@
             [ctView setFrame:CGRectMake(0, 0, 0, 0)];
         }];
     [ctView removeFromSuperview];
+}
+
+- (void)hideWaverView {
+    [UIView animateWithDuration:0.1 animations:^{
+        [_waverView setFrame:CGRectMake(0, 0, 0, 0)];
+    }];
+    [_waverView removeFromSuperview];
 }
 
 - (void)startVocRecWithdic:(NSDictionary *)pid {
@@ -137,8 +181,7 @@
         // 创建失败则报告错误
         NSString *statusString = [NSString stringWithFormat:@"%d", startStatus];
         [self performSelector:@selector(firstStartError:) withObject:statusString afterDelay:0.3];  // 延迟0.3秒，以便能在出错时正常删除view
-        
-        [self HidechatView];
+        [self hideRecView];
         [self.view removeFromSuperview];
         return;
     }
@@ -155,12 +198,12 @@
     
     if (str.integerValue == EVoiceRecognitionStartWorkNOMicrophonePermission) {
         errMsgStatus = 2;
-        [self HidechatView];
+        [self hideRecView];
         errMsgStr = lang(@"AllowAccessMicrophone");
         [_RecLevetimer stopTimer];
         [[DIDIVoiceRecognitionClient sharedInstance] stopVoiceRecognition];
     } else if (str.integerValue == EVoiceRecognitionStartWorkNetUnusable) {
-        [self HidechatView];
+        [self hideRecView];
         errMsgStatus = 2;
         [_RecLevetimer stopTimer];
         errMsgStr = [lang(@"SendFailed") stringByAppendingString:lang(@"CheckNetwork")];
@@ -173,11 +216,10 @@
     }
     
     [self KMFileManagergetFilePath:@"" AndFileName:@""];
-    [self HidechatView];
+    [self hideRecView];
     [self.view removeFromSuperview];
 }
 
-#pragma - mark MVoiceRecognitionClientDelegate
 - (void)VoiceRecognitionClientErrorStatus:(int)aStatus subStatus:(int)aSubStatus {
     ISERROR = YES;
     switch (aSubStatus) {
@@ -344,7 +386,7 @@
 
     [_RecLevetimer stopTimer];
     [[DIDIVoiceRecognitionClient sharedInstance] stopVoiceRecognition];
-    [self HidechatView];
+    [self hideRecView];
     [self.view removeFromSuperview];
 }
 
@@ -367,7 +409,7 @@
             [self createRunLogWithStatus:aStatus];
             
             [_RecLevetimer stopTimer];
-            [self HidechatView];
+            [self hideRecView];
             
             if ([[DIDIVoiceRecognitionClient sharedInstance] getRecognitionProperty] != EVoiceRecognitionPropertyInput) {
                 NSMutableArray *audioResultData = (NSMutableArray *)aObj;
@@ -466,7 +508,6 @@
     }
 }
 
-#pragma - mark KMFileManagerDelegate
 - (void)KMFileManagergetFilePath:(NSString *)path AndFileName:(NSString *)fileName {
     if ([self.delegate respondsToSelector:@selector(getFileName:AndPath: AndERRORNumber:AndStatus:)]) {
         [self.delegate getFileName:fileName AndPath:path AndERRORNumber:errMsgStr AndStatus:errMsgStatus];
@@ -476,14 +517,20 @@
     LogDebug(@"fileName%@", fileName);
 }
 
-#pragma -mark KMRecorderTimerDelegate
 //实时音量检测
 - (void)TimerActionValueChange:(int)time {
 //    self.TimeValue = time/10;
     RecordTimeCount = time;
     int voiceLevel = [[DIDIVoiceRecognitionClient sharedInstance] getCurrentDBLevelMeter];
     LogDebug(@"111112131adada~~~%.2f",(float)voiceLevel/100);
-    [ctView updateMetersByAvgPower:(float)voiceLevel/100];
+    if (_recInfoDic && _recInfoDic[@"newVoice"] && [_recInfoDic[@"newVoice"] boolValue]) {
+        //新版
+//        CGFloat normalizedValue = pow(10, [weakRecorder averagePowerForChannel:0] / 40);
+        _waverView.level = voiceLevel;
+    } else {
+        //旧版
+        [ctView updateMetersByAvgPower:(float)voiceLevel/100];
+    }
     
     NSString *statusMsg = [NSLocalizedString(@"StringLogVoiceLevel", nil) stringByAppendingFormat:@": %d", voiceLevel];
     LogDebug(@"%@", statusMsg);
