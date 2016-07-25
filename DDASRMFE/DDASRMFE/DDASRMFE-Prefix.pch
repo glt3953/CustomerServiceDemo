@@ -1,0 +1,18 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
+
+#import "BD_NameSpaceExtension.h"
+#import "BDInput_NameSpaceExtension.h"
+#import "BDInputSDK_NameSpaceExtension.h"
+
+#include "typedef.h"
+#include "basop32.h"
+#include "bvcommon.h"
+#include "bv32cnst.h"

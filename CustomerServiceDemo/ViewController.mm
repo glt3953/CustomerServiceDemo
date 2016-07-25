@@ -49,7 +49,7 @@
         [weakRecorder updateMeters];
         //double pow (double base, double exponent);求base的exponent次方值
         CGFloat normalizedValue = pow(10, [weakRecorder averagePowerForChannel:0] / 40);
-        NSLog(@"normalizedValue:%f", normalizedValue);
+//        NSLog(@"normalizedValue:%f", normalizedValue);
         waverView.level = normalizedValue;
     };
     [self.view addSubview:waverView];

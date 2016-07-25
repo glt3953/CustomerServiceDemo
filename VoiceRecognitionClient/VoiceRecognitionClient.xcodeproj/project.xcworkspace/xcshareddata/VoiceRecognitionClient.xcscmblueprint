@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F79B6B19C63153B210234CADBB91D1FC31FE3B70",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D30008044CEF15D451347BCEFD7D06F20AB3CCA4" : 0,
+    "F79B6B19C63153B210234CADBB91D1FC31FE3B70" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B6694CB0-D0D1-499E-9400-D77AE97421C6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D30008044CEF15D451347BCEFD7D06F20AB3CCA4" : "..",
+    "F79B6B19C63153B210234CADBB91D1FC31FE3B70" : "sdk-src\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VoiceRecognitionClient",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "VoiceRecognitionClient\/VoiceRecognitionClient.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/10.93.126.27\/pengshouye\/iml-asr-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D30008044CEF15D451347BCEFD7D06F20AB3CCA4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/icode.baidu.com:8235\/baidu\/audio-ios\/asr-online",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F79B6B19C63153B210234CADBB91D1FC31FE3B70"
+    }
+  ]
+}

@@ -178,9 +178,9 @@
 //                waveline.strokeColor = [[UIColor colorFromHexString:@"#ffb8b6" alpha:x / self.waveWidth] CGColor];
 //            }
             
-            if (x >= 0) {
-                waveline.opacity = x / self.waveWidth; //设置透明度
-            }
+//            if (x >= 0) {
+//                waveline.opacity = x / self.waveWidth; //设置透明度
+//            }
 //            NSLog(@"alpha:%f", x / self.waveWidth);
         }
         

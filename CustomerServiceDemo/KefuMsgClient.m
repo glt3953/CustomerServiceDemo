@@ -527,7 +527,7 @@
         //新版
 //        CGFloat normalizedValue = pow(10, [weakRecorder averagePowerForChannel:0] / 40);
         _waverView.level = (float)voiceLevel/100;
-        LogDebug(@"_waverView.level:%f", _waverView.level);
+//        LogDebug(@"_waverView.level:%f", _waverView.level);
     } else {
         //旧版
         [ctView updateMetersByAvgPower:(float)voiceLevel/100];
