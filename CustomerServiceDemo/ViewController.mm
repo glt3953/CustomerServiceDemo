@@ -40,19 +40,19 @@
     _recountTimer.delegate = self;
     
     [self setupRecorder];
-//    CGFloat originX = -100; //将波纹的起始点挪至界面外
-//    WaverView *waverView = [[WaverView alloc] initWithFrame:CGRectMake(originX, CGRectGetHeight(self.view.bounds)/2.0 - 50.0, CGRectGetWidth(self.view.bounds) + 2 * ABS(originX), 100.0)];
-//    //定制
-//    waverView.numberOfWaves = 4;
-//    __block AVAudioRecorder *weakRecorder = self.recorder;
-//    waverView.waverLevelCallback = ^(WaverView *waverView) {
-//        [weakRecorder updateMeters];
-//        //double pow (double base, double exponent);求base的exponent次方值
-//        CGFloat normalizedValue = pow(10, [weakRecorder averagePowerForChannel:0] / 40);
-//        NSLog(@"normalizedValue:%f", normalizedValue);
-//        waverView.level = normalizedValue;
-//    };
-//    [self.view addSubview:waverView];
+    CGFloat originX = -100; //将波纹的起始点挪至界面外
+    WaverView *waverView = [[WaverView alloc] initWithFrame:CGRectMake(originX, CGRectGetHeight(self.view.bounds)/2.0 - 50.0, CGRectGetWidth(self.view.bounds) + 2 * ABS(originX), 100.0)];
+    //定制
+    waverView.numberOfWaves = 4;
+    __block AVAudioRecorder *weakRecorder = self.recorder;
+    waverView.waverLevelCallback = ^(WaverView *waverView) {
+        [weakRecorder updateMeters];
+        //double pow (double base, double exponent);求base的exponent次方值
+        CGFloat normalizedValue = pow(10, [weakRecorder averagePowerForChannel:0] / 40);
+        NSLog(@"normalizedValue:%f", normalizedValue);
+        waverView.level = normalizedValue;
+    };
+    [self.view addSubview:waverView];
     
     UIButton *startRecButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [startRecButton setFrame:(CGRect){20, 240 + 150, 80, 30}];

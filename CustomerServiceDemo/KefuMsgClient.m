@@ -111,7 +111,7 @@
 
 - (void)showWaverView {
     CGFloat originX = -100; //将波纹的起始点挪至界面外
-    CGFloat viewHeight = 180;
+    CGFloat viewHeight = 135;
     //定制
     [_waverView setFrame:(CGRect){originX, CGRectGetHeight(self.view.bounds) - viewHeight, CGRectGetWidth(self.view.bounds) + 2 * ABS(originX), viewHeight}];
     _waverView.numberOfWaves = 4;

@@ -17,7 +17,7 @@
 @property (nonatomic) CGFloat waveHeight;
 @property (nonatomic) CGFloat waveWidth;
 @property (nonatomic) CGFloat waveMid;
-@property (nonatomic) CGFloat maxAmplitude;
+@property (nonatomic) CGFloat maxAmplitude; //最大振幅
 @property (nonatomic, strong) CADisplayLink *displayLink;
 
 @end
@@ -68,7 +68,8 @@
 	self.waveHeight = CGRectGetHeight(self.bounds);
     self.waveWidth  = CGRectGetWidth(self.bounds);
     self.waveMid    = self.waveWidth / 2.0f;
-    self.maxAmplitude = self.waveHeight - 4.0f;
+//    self.maxAmplitude = self.waveHeight - 4.0f;
+    self.maxAmplitude = 90;
     
     //定制样式
     for (int i = 0; i < self.numberOfWaves; i++) {
@@ -132,7 +133,8 @@
 	self.waveHeight = CGRectGetHeight(self.bounds);
 	self.waveWidth  = CGRectGetWidth(self.bounds);
 	self.waveMid    = self.waveWidth / 2.0f;
-	self.maxAmplitude = self.waveHeight - 4.0f;
+//	self.maxAmplitude = self.waveHeight - 4.0f;
+    self.maxAmplitude = 90;
 	
     UIGraphicsBeginImageContext(self.frame.size);
     
@@ -176,9 +178,9 @@
 //                waveline.strokeColor = [[UIColor colorFromHexString:@"#ffb8b6" alpha:x / self.waveWidth] CGColor];
 //            }
             
-//            if (x >= 0) {
-//                waveline.opacity = x / self.waveWidth;
-//            }
+            if (x >= 0) {
+                waveline.opacity = x / self.waveWidth; //设置透明度
+            }
 //            NSLog(@"alpha:%f", x / self.waveWidth);
         }
         
